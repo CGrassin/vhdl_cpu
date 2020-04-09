@@ -1,0 +1,109 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sat Apr 22 09:34:45 2017
+# Process ID: 2496
+# Log file: /home/charles/Documents/FPGA/CharlesProc/planAhead_run_1/planAhead.log
+# Journal file: /home/charles/Documents/FPGA/CharlesProc/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/charles/Documents/FPGA/CharlesProc/pa.fromHdl.tcl
+# create_project -name CharlesProc -dir "/home/charles/Documents/FPGA/CharlesProc/planAhead_run_1" -part xc3s100ecp132-5
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "Computer.ucf" [current_fileset -constrset]
+Adding file '/home/charles/Documents/FPGA/CharlesProc/Computer.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {Constants.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ALU.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {RAMController.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {MicroProcessor.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Computer.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top Computer $srcset
+# add_files [list {Computer.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc3s100ecp132-5
+Using Verific elaboration
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/Constants.vhd" into library work
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/ALU.vhd" into library work
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/RAMController.vhd" into library work
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/MicroProcessor.vhd" into library work
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/Computer.vhd" into library work
+INFO: [Designutils 20-910] Reading macro library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/ClockBuffers.xml
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/cp132/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s100e/cp132/SSORules.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-5.lib.
+INFO: [Timing 38-34] Done reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-5.lib.
+Parsing UCF File [/home/charles/Documents/FPGA/CharlesProc/Computer.ucf]
+Finished Parsing UCF File [/home/charles/Documents/FPGA/CharlesProc/Computer.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 50b9d2c8
+open_rtl_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2757.621 ; gain = 86.727
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin G3 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin B8 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin N3 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin M5 [get_ports {outLEDs[0]}]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports {outLEDs[1]}]
+endgroup
+startgroup
+set_property package_pin P7 [get_ports {outLEDs[2]}]
+endgroup
+startgroup
+set_property package_pin P6 [get_ports {outLEDs[3]}]
+endgroup
+startgroup
+set_property package_pin N5 [get_ports {outLEDs[4]}]
+endgroup
+startgroup
+set_property package_pin N4 [get_ports {outLEDs[5]}]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports {outLEDs[6]}]
+endgroup
+startgroup
+set_property package_pin G1 [get_ports {outLEDs[7]}]
+endgroup
+save_constraints
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See /home/charles/Documents/FPGA/CharlesProc/planAhead_pid2496.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sat Apr 22 09:38:25 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead

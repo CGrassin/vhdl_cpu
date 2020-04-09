@@ -1,0 +1,13 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = A7;
+NET "reset" LOC = N3;
+NET "outLEDs[0]" LOC = M5;
+NET "outLEDs[1]" LOC = M11;
+NET "outLEDs[2]" LOC = P7;
+NET "outLEDs[3]" LOC = P6;
+NET "outLEDs[4]" LOC = N5;
+NET "outLEDs[5]" LOC = N4;
+NET "outLEDs[6]" LOC = P4;
+NET "outLEDs[7]" LOC = G1;

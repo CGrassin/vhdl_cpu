@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Charles/Google Drive/Projets/CharlesProc/ALUTestBench.xst" -ofn "C:/Users/Charles/Google Drive/Projets/CharlesProc/ALUTestBench.syr" 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/ALUTestBench.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/ALUTestBench.syr" 

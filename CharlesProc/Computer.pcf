@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Apr 22 09:50:33 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "outLEDs<0>" LOCATE = SITE "M5" LEVEL 1;
+COMP "outLEDs<1>" LOCATE = SITE "M11" LEVEL 1;
+COMP "clk" LOCATE = SITE "A7" LEVEL 1;
+COMP "outLEDs<2>" LOCATE = SITE "P7" LEVEL 1;
+COMP "outLEDs<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "outLEDs<4>" LOCATE = SITE "N5" LEVEL 1;
+COMP "outLEDs<5>" LOCATE = SITE "N4" LEVEL 1;
+COMP "outLEDs<6>" LOCATE = SITE "P4" LEVEL 1;
+COMP "outLEDs<7>" LOCATE = SITE "G1" LEVEL 1;
+COMP "reset" LOCATE = SITE "N3" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

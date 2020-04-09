@@ -1,0 +1,93 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Map Application Log File for Design 'Computer'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off
+-c 100 -o Computer_map.ncd Computer.ngd Computer.pcf 
+Target Device  : xc3s100e
+Target Package : cp132
+Target Speed   : -5
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Sat Apr 22 09:50:30 2017
+
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:266 - The function generator dataBus<0>LogicTrst11 failed to merge
+   with F5 multiplexer dataBus<10>LogicTrst1_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator dataBus<0>LogicTrst11 failed to merge
+   with F5 multiplexer dataBus<15>LogicTrst1_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator dataBus<0>LogicTrst11 failed to merge
+   with F5 multiplexer dataBus<11>LogicTrst1_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator dataBus<0>LogicTrst11 failed to merge
+   with F5 multiplexer dataBus<8>LogicTrst1_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator dataBus<0>LogicTrst11 failed to merge
+   with F5 multiplexer dataBus<12>LogicTrst1_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator dataBus<0>LogicTrst11 failed to merge
+   with F5 multiplexer dataBus<9>LogicTrst1_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator dataBus<0>LogicTrst11 failed to merge
+   with F5 multiplexer dataBus<13>LogicTrst1_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator dataBus<0>LogicTrst11 failed to merge
+   with F5 multiplexer dataBus<14>LogicTrst1_f5.  There is a conflict for the
+   FXMUX.  The design will exhibit suboptimal timing.
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    8
+Logic Utilization:
+  Number of Slice Flip Flops:           116 out of   1,920    6%
+  Number of 4 input LUTs:               203 out of   1,920   10%
+Logic Distribution:
+  Number of occupied Slices:            146 out of     960   15%
+    Number of Slices containing only related logic:     146 out of     146 100%
+    Number of Slices containing unrelated logic:          0 out of     146   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         213 out of   1,920   11%
+    Number used as logic:               203
+    Number used as a route-thru:         10
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 10 out of      83   12%
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Average Fanout of Non-Clock Nets:                3.60
+
+Peak Memory Usage:  607 MB
+Total REAL time to MAP completion:  3 secs 
+Total CPU time to MAP completion:   3 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "Computer_map.mrp" for details.

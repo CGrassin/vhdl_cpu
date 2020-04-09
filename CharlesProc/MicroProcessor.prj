@@ -1,0 +1,3 @@
+vhdl work "Constants.vhd"
+vhdl work "ALU.vhd"
+vhdl work "MicroProcessor.vhd"

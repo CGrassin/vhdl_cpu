@@ -1,0 +1,3 @@
+vhdl work "/home/charles/Documents/FPGA/CharlesProc/Constants.vhd"
+vhdl work "/home/charles/Documents/FPGA/CharlesProc/ALU.vhd"
+vhdl work "/home/charles/Documents/FPGA/CharlesProc/ALUTestBench.vhd"

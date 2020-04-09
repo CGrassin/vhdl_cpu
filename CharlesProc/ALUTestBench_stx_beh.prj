@@ -1,0 +1,3 @@
+vhdl isim_temp "Constants.vhd"
+vhdl isim_temp "ALU.vhd"
+vhdl isim_temp "ALUTestBench.vhd"

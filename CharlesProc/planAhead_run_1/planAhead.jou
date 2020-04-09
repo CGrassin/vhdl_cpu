@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sat Apr 22 09:34:45 2017
+# Process ID: 2496
+# Log file: /home/charles/Documents/FPGA/CharlesProc/planAhead_run_1/planAhead.log
+# Journal file: /home/charles/Documents/FPGA/CharlesProc/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/charles/Documents/FPGA/CharlesProc/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin G3 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin B8 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin N3 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin M5 [get_ports {outLEDs[0]}]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports {outLEDs[1]}]
+endgroup
+startgroup
+set_property package_pin P7 [get_ports {outLEDs[2]}]
+endgroup
+startgroup
+set_property package_pin P6 [get_ports {outLEDs[3]}]
+endgroup
+startgroup
+set_property package_pin N5 [get_ports {outLEDs[4]}]
+endgroup
+startgroup
+set_property package_pin N4 [get_ports {outLEDs[5]}]
+endgroup
+startgroup
+set_property package_pin P4 [get_ports {outLEDs[6]}]
+endgroup
+startgroup
+set_property package_pin G1 [get_ports {outLEDs[7]}]
+endgroup
+save_constraints

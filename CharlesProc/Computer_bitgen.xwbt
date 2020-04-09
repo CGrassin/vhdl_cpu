@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/charles/Documents/FPGA/CharlesProc/Computer.ncd
+OUTFILE=/home/charles/Documents/FPGA/CharlesProc/Computer.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=/home/charles/Documents/FPGA/CharlesProc
+LICENSE=WebPack
+USER_INFO=211004709_0_0_758

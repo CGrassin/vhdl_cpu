@@ -1,0 +1,29 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/charles/Documents/FPGA/CharlesProc/Computer_isim_beh.exe -prj /home/charles/Documents/FPGA/CharlesProc/Computer_beh.prj work.Computer 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/Constants.vhd" into library work
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/ALU.vhd" into library work
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/RAMController.vhd" into library work
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/MicroProcessor.vhd" into library work
+Parsing VHDL file "/home/charles/Documents/FPGA/CharlesProc/Computer.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 96608 KB
+Fuse CPU Usage: 1640 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package constants
+Compiling package numeric_std
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity MicroProcessor [microprocessor_default]
+Compiling architecture behavioral of entity RAMController [ramcontroller_default]
+Compiling architecture behavioral of entity computer
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 11 VHDL Units
+Built simulation executable /home/charles/Documents/FPGA/CharlesProc/Computer_isim_beh.exe
+Fuse Memory Usage: 408424 KB
+Fuse CPU Usage: 1790 ms
+GCC CPU Usage: 2820 ms

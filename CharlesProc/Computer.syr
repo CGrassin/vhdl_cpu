@@ -1,0 +1,449 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: Computer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Computer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Computer"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : Computer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/charles/Documents/FPGA/CharlesProc/Constants.vhd" in Library work.
+Package <constants> compiled.
+Package body <constants> compiled.
+Compiling vhdl file "/home/charles/Documents/FPGA/CharlesProc/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "/home/charles/Documents/FPGA/CharlesProc/MicroProcessor.vhd" in Library work.
+Architecture behavioral of Entity microprocessor is up to date.
+Compiling vhdl file "/home/charles/Documents/FPGA/CharlesProc/RAMController.vhd" in Library work.
+Architecture behavioral of Entity ramcontroller is up to date.
+Compiling vhdl file "/home/charles/Documents/FPGA/CharlesProc/Computer.vhd" in Library work.
+Architecture behavioral of Entity computer is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Computer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MicroProcessor> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <RAMController> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Computer> in library <work> (Architecture <behavioral>).
+Entity <Computer> analyzed. Unit <Computer> generated.
+
+Analyzing Entity <MicroProcessor> in library <work> (Architecture <Behavioral>).
+Entity <MicroProcessor> analyzed. Unit <MicroProcessor> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <Behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <RAMController> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:790 - "/home/charles/Documents/FPGA/CharlesProc/RAMController.vhd" line 30: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "/home/charles/Documents/FPGA/CharlesProc/RAMController.vhd" line 31: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "/home/charles/Documents/FPGA/CharlesProc/RAMController.vhd" line 32: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <RAM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <RAMController> analyzed. Unit <RAMController> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <RAMController>.
+    Related source file is "/home/charles/Documents/FPGA/CharlesProc/RAMController.vhd".
+WARNING:Xst:647 - Input <addressBus<7:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit tristate buffer for signal <dataBus>.
+    Found 16-bit 5-to-1 multiplexer for signal <$varindex0000> created at line 30.
+    Found 80-bit register for signal <RAM>.
+    Summary:
+	inferred  80 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <RAMController> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "/home/charles/Documents/FPGA/CharlesProc/ALU.vhd".
+    Found 8-bit register for signal <D0>.
+    Found 8-bit register for signal <D1>.
+    Found 8-bit addsub for signal <OPMux$addsub0000>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <MicroProcessor>.
+    Related source file is "/home/charles/Documents/FPGA/CharlesProc/MicroProcessor.vhd".
+    Found 16-bit tristate buffer for signal <dataBus>.
+    Found 1-bit register for signal <fetch>.
+    Found 16-bit register for signal <OPReg>.
+    Found 8-bit up counter for signal <PC>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  17 D-type flip-flop(s).
+	inferred  16 Tristate(s).
+Unit <MicroProcessor> synthesized.
+
+
+Synthesizing Unit <Computer>.
+    Related source file is "/home/charles/Documents/FPGA/CharlesProc/Computer.vhd".
+Unit <Computer> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 9
+ 1-bit register                                        : 1
+ 16-bit register                                       : 6
+ 8-bit register                                        : 2
+# Multiplexers                                         : 1
+ 16-bit 5-to-1 multiplexer                             : 1
+# Tristates                                            : 2
+ 16-bit tristate buffer                                : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit addsub                                          : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 113
+ Flip-Flops                                            : 113
+# Multiplexers                                         : 16
+ 1-bit 5-to-1 multiplexer                              : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2042 - Unit MicroProcessor: 16 internal tristates are replaced by logic (pull-up yes): OPRegMux<0>_norst, OPRegMux<10>_norst, OPRegMux<11>_norst, OPRegMux<12>_norst, OPRegMux<13>_norst, OPRegMux<14>_norst, OPRegMux<15>_norst, OPRegMux<1>_norst, OPRegMux<2>_norst, OPRegMux<3>_norst, OPRegMux<4>_norst, OPRegMux<5>_norst, OPRegMux<6>_norst, OPRegMux<7>_norst, OPRegMux<8>_norst, OPRegMux<9>_norst.
+WARNING:Xst:2042 - Unit RAMController: 16 internal tristates are replaced by logic (pull-up yes): dataBus<0>, dataBus<10>, dataBus<11>, dataBus<12>, dataBus<13>, dataBus<14>, dataBus<15>, dataBus<1>, dataBus<2>, dataBus<3>, dataBus<4>, dataBus<5>, dataBus<6>, dataBus<7>, dataBus<8>, dataBus<9>.
+WARNING:Xst:2677 - Node <CPU/PC_7> of sequential type is unconnected in block <Computer>.
+WARNING:Xst:2677 - Node <CPU/PC_6> of sequential type is unconnected in block <Computer>.
+WARNING:Xst:2677 - Node <CPU/PC_5> of sequential type is unconnected in block <Computer>.
+WARNING:Xst:2677 - Node <CPU/PC_4> of sequential type is unconnected in block <Computer>.
+WARNING:Xst:2677 - Node <CPU/PC_3> of sequential type is unconnected in block <Computer>.
+
+Optimizing unit <Computer> ...
+
+Optimizing unit <ALU> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Computer, actual ratio is 12.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 116
+ Flip-Flops                                            : 116
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Computer.ngr
+Top Level Output File Name         : Computer
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 270
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 2
+#      LUT3                        : 79
+#      LUT3_D                      : 10
+#      LUT3_L                      : 3
+#      LUT4                        : 92
+#      LUT4_D                      : 10
+#      LUT4_L                      : 10
+#      MUXCY                       : 9
+#      MUXF5                       : 40
+#      VCC                         : 1
+#      XORCY                       : 11
+# FlipFlops/Latches                : 116
+#      FDCE                        : 19
+#      FDE                         : 80
+#      FDP                         : 1
+#      FDR                         : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      125  out of    960    13%  
+ Number of Slice Flip Flops:            116  out of   1920     6%  
+ Number of 4 input LUTs:                208  out of   1920    10%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of     83    12%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 116   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 20    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.740ns (Maximum Frequency: 129.203MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.182ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.740ns (frequency: 129.203MHz)
+  Total number of paths / destination ports: 13639 / 231
+-------------------------------------------------------------------------
+Delay:               7.740ns (Levels of Logic = 12)
+  Source:            CPU/OPReg_15 (FF)
+  Destination:       CPU/ALU/D1_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: CPU/OPReg_15 to CPU/ALU/D1_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             15   0.514   1.016  CPU/OPReg_15 (CPU/OPReg_15)
+     LUT4_D:I0->O          7   0.612   0.632  CPU/ALU/OPMux_mux0000<0>11 (CPU/ALU/N11)
+     LUT3:I2->O            1   0.612   0.426  CPU/ALU/OPMux_mux0000<1>1 (CPU/ALU/OPMux_mux0000<1>)
+     LUT3:I1->O            1   0.612   0.000  CPU/ALU/Maddsub_OPMux_addsub0000_lut<1> (CPU/ALU/Maddsub_OPMux_addsub0000_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  CPU/ALU/Maddsub_OPMux_addsub0000_cy<1> (CPU/ALU/Maddsub_OPMux_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  CPU/ALU/Maddsub_OPMux_addsub0000_cy<2> (CPU/ALU/Maddsub_OPMux_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  CPU/ALU/Maddsub_OPMux_addsub0000_cy<3> (CPU/ALU/Maddsub_OPMux_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  CPU/ALU/Maddsub_OPMux_addsub0000_cy<4> (CPU/ALU/Maddsub_OPMux_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  CPU/ALU/Maddsub_OPMux_addsub0000_cy<5> (CPU/ALU/Maddsub_OPMux_addsub0000_cy<5>)
+     MUXCY:CI->O           0   0.052   0.000  CPU/ALU/Maddsub_OPMux_addsub0000_cy<6> (CPU/ALU/Maddsub_OPMux_addsub0000_cy<6>)
+     XORCY:CI->O           1   0.699   0.360  CPU/ALU/Maddsub_OPMux_addsub0000_xor<7> (CPU/ALU/OPMux_addsub0000<7>)
+     LUT4_L:I3->LO         1   0.612   0.103  CPU/ALU/OPMux<7>21 (CPU/ALU/OPMux<7>21)
+     LUT4:I3->O            2   0.612   0.000  CPU/ALU/OPMux<7>37 (CPU/ALU/OPMux<7>)
+     FDCE:D                    0.268          CPU/ALU/D0_7
+    ----------------------------------------
+    Total                      7.740ns (5.202ns logic, 2.537ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              4.182ns (Levels of Logic = 1)
+  Source:            RAM/RAM_4_7 (FF)
+  Destination:       outLEDs<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: RAM/RAM_4_7 to outLEDs<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.514   0.499  RAM/RAM_4_7 (RAM/RAM_4_7)
+     OBUF:I->O                 3.169          outLEDs_7_OBUF (outLEDs<7>)
+    ----------------------------------------
+    Total                      4.182ns (3.683ns logic, 0.499ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 8.85 secs
+ 
+--> 
+
+
+Total memory usage is 516860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

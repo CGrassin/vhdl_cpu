@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Charles/Google Drive/Projets/CharlesProc/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Charles/Google Drive/Projets/CharlesProc/xst"
+elaborate
+-ifn Constants.prj
+-ifmt mixed

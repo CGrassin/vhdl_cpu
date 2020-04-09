@@ -1,0 +1,33 @@
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 Computer.ngc Computer.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Computer_map.ncd Computer.ngd Computer.pcf 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 Computer.ngc Computer.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Computer_map.ncd Computer.ngd Computer.pcf 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 Computer.ngc Computer.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Computer_map.ncd Computer.ngd Computer.pcf 
+par -w -intstyle ise -ol high -t 1 Computer_map.ncd Computer.ncd Computer.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Computer.twx Computer.ncd -o Computer.twr Computer.pcf 
+bitgen -intstyle ise -f Computer.ut Computer.ncd 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Computer.ucf -p xc3s100e-cp132-5 Computer.ngc Computer.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Computer_map.ncd Computer.ngd Computer.pcf 
+par -w -intstyle ise -ol high -t 1 Computer_map.ncd Computer.ncd Computer.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Computer.twx Computer.ncd -o Computer.twr Computer.pcf -ucf Computer.ucf 
+bitgen -intstyle ise -f Computer.ut Computer.ncd 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Computer.ucf -p xc3s100e-cp132-5 Computer.ngc Computer.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Computer_map.ncd Computer.ngd Computer.pcf 
+par -w -intstyle ise -ol high -t 1 Computer_map.ncd Computer.ncd Computer.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Computer.twx Computer.ncd -o Computer.twr Computer.pcf -ucf Computer.ucf 
+bitgen -intstyle ise -f Computer.ut Computer.ncd 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Computer.ucf -p xc3s100e-cp132-5 Computer.ngc Computer.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o Computer_map.ncd Computer.ngd Computer.pcf 
+par -w -intstyle ise -ol high -t 1 Computer_map.ncd Computer.ncd Computer.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Computer.twx Computer.ncd -o Computer.twr Computer.pcf -ucf Computer.ucf 
+bitgen -intstyle ise -f Computer.ut Computer.ncd 
+xst -intstyle ise -ifn "/home/charles/Documents/FPGA/CharlesProc/Computer.xst" -ofn "/home/charles/Documents/FPGA/CharlesProc/Computer.syr" 
